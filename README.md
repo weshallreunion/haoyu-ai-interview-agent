@@ -26,6 +26,26 @@ The agent is explicitly instructed not to invent experiences, skills, project re
 
 ---
 
+## Demo
+
+### AI Interview Chat
+
+Recruiters can ask questions about my verified projects, skills, motivations, and internship availability.
+
+![Haoyu AI chat interface](docs/images/chat-demo.png)
+
+### Multi-turn Conversation
+
+The agent preserves conversation context and selects different tools for follow-up questions.
+
+![Haoyu AI multi-turn conversation](docs/images/multi-turn-demo.png)
+
+### Feedback Dashboard
+
+A protected administrator dashboard displays answer ratings, satisfaction statistics, and recent feedback records.
+
+![Haoyu AI feedback dashboard](docs/images/admin-dashboard.png)
+
 ## Core Features
 
 ### Verified knowledge grounding
