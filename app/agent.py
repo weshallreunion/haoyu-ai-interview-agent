@@ -1,4 +1,4 @@
-from agents import Agent
+from agents import Agent, ModelSettings
 
 from app.tools import (
     get_all_verified_projects,
@@ -132,9 +132,12 @@ haoyu_agent = Agent(
     name="Haoyu AI",
     instructions=HAOYU_AGENT_INSTRUCTIONS,
     tools=[
-    get_verified_profile,
-    get_all_verified_projects,
-    search_verified_projects,
-    get_verified_persona,
-],
+        get_verified_profile,
+        get_all_verified_projects,
+        search_verified_projects,
+        get_verified_persona,
+    ],
+    model_settings=ModelSettings(
+        max_tokens=800,
+    ),
 )

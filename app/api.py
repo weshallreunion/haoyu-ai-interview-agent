@@ -787,7 +787,7 @@ async def chat(
             haoyu_agent,
             payload.message,
             session=session,
-            max_turns=5,
+            max_turns=4,
         )
 
         answer = str(
@@ -919,7 +919,7 @@ async def chat_stream(
                 haoyu_agent,
                 payload.message,
                 session=session,
-                max_turns=5,
+                max_turns=4,
             )
 
             async for event in (
