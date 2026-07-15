@@ -1,5 +1,7 @@
 # Haoyu AI Interview Agent
 
+[![CI](https://github.com/weshallreunion/haoyu-ai-interview-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/你的GitHub用户名/haoyu-ai-interview-agent/actions/workflows/ci.yml)
+
 A personal AI interview agent that allows recruiters to learn about Haoyu Qian's verified background, technical skills, projects, motivations, and internship availability through natural conversation.
 
 This project is built with the OpenAI Agents SDK, FastAPI, SQLite, native JavaScript, and Docker.
