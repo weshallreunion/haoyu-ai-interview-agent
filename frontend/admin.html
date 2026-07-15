@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Haoyu AI 反馈后台</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/admin.css"
+    >
+</head>
+
+<body>
+    <main class="admin-container">
+        <header class="admin-header">
+            <div>
+                <p class="eyebrow">
+                    Haoyu AI
+                </p>
+
+                <h1>反馈管理后台</h1>
+
+                <p class="subtitle">
+                    查看回答满意率和最近的用户反馈
+                </p>
+            </div>
+
+            <button
+                id="logout-button"
+                class="secondary-button"
+                type="button"
+                hidden
+            >
+                退出后台
+            </button>
+        </header>
+
+
+        <section
+            id="login-panel"
+            class="login-panel"
+        >
+            <label for="token-input">
+                管理员密钥
+            </label>
+
+            <div class="login-row">
+                <input
+                    id="token-input"
+                    type="password"
+                    autocomplete="current-password"
+                    placeholder="输入 ADMIN_API_TOKEN"
+                >
+
+                <button
+                    id="login-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    进入后台
+                </button>
+            </div>
+
+            <p
+                id="login-status"
+                class="status-text"
+            ></p>
+        </section>
+
+
+        <section
+            id="dashboard"
+            hidden
+        >
+            <div class="summary-grid">
+                <article class="summary-card">
+                    <span>总反馈</span>
+                    <strong id="total-count">
+                        0
+                    </strong>
+                </article>
+
+                <article class="summary-card">
+                    <span>有帮助</span>
+                    <strong id="up-count">
+                        0
+                    </strong>
+                </article>
+
+                <article class="summary-card">
+                    <span>没帮助</span>
+                    <strong id="down-count">
+                        0
+                    </strong>
+                </article>
+
+                <article class="summary-card">
+                    <span>满意率</span>
+                    <strong id="satisfaction-rate">
+                        0%
+                    </strong>
+                </article>
+            </div>
+
+
+            <section class="records-section">
+                <div class="records-header">
+                    <div>
+                        <h2>最近反馈</h2>
+
+                        <p>
+                            优先检查差评问答，持续改进知识库和提示词
+                        </p>
+                    </div>
+
+                    <button
+                        id="refresh-button"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        刷新
+                    </button>
+                </div>
+
+
+                <div class="filter-row">
+                    <button
+                        class="filter-button active"
+                        data-rating=""
+                        type="button"
+                    >
+                        全部
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-rating="up"
+                        type="button"
+                    >
+                        👍 有帮助
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-rating="down"
+                        type="button"
+                    >
+                        👎 没帮助
+                    </button>
+                </div>
+
+
+                <p
+                    id="dashboard-status"
+                    class="status-text"
+                ></p>
+
+                <div id="feedback-list"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="/static/admin.js"></script>
+</body>
+</html>

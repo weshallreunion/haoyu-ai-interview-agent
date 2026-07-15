@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Haoyu AI Interview Agent</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="chat-container">
+        <header class="chat-header">
+    <div class="avatar">HQ</div>
+
+    <div>
+        <h1>Haoyu AI</h1>
+        <p>钱浩宇的个人经历智能体</p>
+    </div>
+
+    <button
+        id="new-chat-button"
+        class="new-chat-button"
+        type="button"
+    >
+        新对话
+    </button>
+</header>
+
+        <section id="messages" class="messages">
+            <div class="message assistant-message">
+                <div class="message-label">Haoyu AI</div>
+                <div class="message-content">
+    你好，我是 Haoyu AI。你可以把我理解成钱浩宇的数字简历，
+    直接和我聊他的项目、技术方向、学习经历和实习安排。
+</div>
+            </div>
+        </section>
+
+        <section class="suggestions">
+            <button class="suggestion">
+                你做过哪些项目？
+            </button>
+
+            <button class="suggestion">
+                你掌握哪些技术？
+            </button>
+
+            <button class="suggestion">
+                你什么时候可以实习？
+            </button>
+        </section>
+
+        <form id="chat-form" class="chat-form">
+            <textarea
+                id="message-input"
+                placeholder="请输入您想了解的问题……"
+                maxlength="1000"
+                rows="2"
+                required
+            ></textarea>
+
+            <button id="send-button" type="submit">
+                发送
+            </button>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked@18.0.6/lib/marked.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.12/dist/purify.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

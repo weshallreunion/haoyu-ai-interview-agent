@@ -1,0 +1,30 @@
+# 私密环境变量
+.env
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 编辑器配置
+.vscode/
+.idea/
+
+# SQLite数据库和运行数据
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# 自动评测报告
+evaluation/reports/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 系统文件
+.DS_Store
+Thumbs.db

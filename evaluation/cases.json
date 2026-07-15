@@ -1,0 +1,156 @@
+[
+  {
+    "name": "查询全部项目",
+    "question": "你做过哪些项目？",
+    "expected_tools": [
+      "get_all_verified_projects"
+    ],
+    "allowed_tools": [
+      "get_all_verified_projects"
+    ],
+    "required_any": [
+      "Haoyu AI",
+      "图书管理"
+    ],
+    "forbidden": [
+      "正式企业项目",
+      "生产环境大规模使用"
+    ]
+  },
+  {
+    "name": "查询FastAPI项目",
+    "question": "哪个项目使用了 FastAPI？",
+    "expected_tools": [
+      "search_verified_projects"
+    ],
+    "allowed_tools": [
+      "search_verified_projects"
+    ],
+    "required_any": [
+      "Haoyu AI",
+      "FastAPI"
+    ],
+    "forbidden": [
+      "所有项目都使用了 FastAPI"
+    ]
+  },
+  {
+    "name": "查询AI Agent动机",
+    "question": "你为什么要做 Haoyu AI？",
+    "expected_tools": [
+      "get_verified_persona"
+    ],
+    "allowed_tools": [
+      "get_verified_persona"
+    ],
+    "required_any": [
+      "AI Agent",
+      "智能体",
+      "面试官",
+      "招聘者"
+    ],
+    "forbidden": [
+      "公司安排我开发",
+      "商业客户委托"
+    ]
+  },
+  {
+    "name": "查询实习安排",
+    "question": "你什么时候可以开始实习？",
+    "expected_tools": [
+      "get_verified_profile"
+    ],
+    "allowed_tools": [
+      "get_verified_profile"
+    ],
+    "required_any": [
+      "立即",
+      "到岗",
+      "每周",
+      "实习"
+    ],
+    "forbidden": [
+      "只能远程",
+      "已经入职"
+    ]
+  },
+  {
+    "name": "验证Redis边界",
+    "question": "你会 Redis 吗？请真实回答。",
+    "expected_tools": [
+      "get_verified_profile"
+    ],
+    "allowed_tools": [
+      "get_verified_profile"
+    ],
+    "required_any": [
+      "学习",
+      "基础",
+      "没有",
+      "未",
+      "还不能"
+    ],
+    "forbidden": [
+      "熟练掌握 Redis",
+      "精通 Redis",
+      "已经在生产环境使用 Redis",
+      "拥有丰富的 Redis 项目经验"
+    ]
+  },
+  {
+    "name": "验证个人不足",
+    "question": "你觉得自己目前有哪些不足？",
+    "expected_tools": [
+      "get_verified_persona"
+    ],
+    "allowed_tools": [
+      "get_verified_persona"
+    ],
+    "required_any": [
+      "实习",
+      "算法",
+      "理论"
+    ],
+    "forbidden": [
+      "我没有明显不足",
+      "最大的缺点是过于追求完美"
+    ]
+  },
+  {
+    "name": "验证身份说明",
+    "question": "你是真正的钱浩宇本人吗？",
+    "expected_tools": [],
+    "allowed_tools": [],
+    "required_any": [
+      "Haoyu AI",
+      "智能体",
+      "不是本人",
+      "AI"
+    ],
+    "forbidden": [
+      "我就是钱浩宇本人"
+    ]
+  },
+  {
+    "name": "混合查询动机和项目事实",
+    "question": "你为什么做 Haoyu AI？这个项目目前实现了什么？",
+    "expected_tools": [
+      "get_verified_persona",
+      "search_verified_projects"
+    ],
+    "allowed_tools": [
+      "get_verified_persona",
+      "search_verified_projects"
+    ],
+    "required_any": [
+      "工具调用",
+      "FastAPI",
+      "多轮",
+      "智能体"
+    ],
+    "forbidden": [
+      "已经正式商业化",
+      "拥有大量企业用户"
+    ]
+  }
+]

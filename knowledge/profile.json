@@ -1,0 +1,250 @@
+{
+  "basic": {
+    "name_cn": "钱浩宇",
+    "name_en": "Haoyu Qian",
+    "current_city": "Shenzhen",
+    "target_roles": [
+      "Backend Development Intern",
+      "Software Development Intern",
+      "AI Application Development Intern",
+      "Test Development Intern"
+    ]
+  },
+
+  "education": {
+    "university": "Guangdong University of Technology",
+    "major": "Software Engineering",
+    "degree": "Bachelor",
+    "start_date": "2023-09",
+    "expected_graduation": "2027-06",
+    "gpa": "3.8/5.0",
+    "cet6_score": 548,
+    "courses": [
+      "Data Structures",
+      "Computer Networks",
+      "Operating Systems",
+      "Computer Organization",
+      "Database Systems",
+      "Software Engineering"
+    ]
+  },
+
+  "skills": {
+    "programming_languages": {
+      "basic_or_familiar": [
+        "Python",
+        "C",
+        "SQL"
+      ],
+      "currently_learning": [
+        "Go",
+        "C++"
+      ]
+    },
+
+    "backend": {
+      "practiced": [
+        "Gin",
+        "GORM",
+        "RESTful API",
+        "JSON",
+        "MySQL"
+      ],
+      "learning": [
+        "Database transactions",
+        "Concurrency safety",
+        "Backend testing",
+        "System design"
+      ]
+    },
+
+    "engineering_tools": {
+      "practiced": [
+        "Git",
+        "Linux basic commands",
+        "Docker basic deployment"
+      ]
+    },
+
+    "ai": {
+      "currently_learning": [
+        "AI Agent development",
+        "Prompt engineering",
+        "Tool calling",
+        "RAG"
+      ],
+      "completed_projects": []
+    }
+  },
+
+  "projects": [
+    {
+  "name": "Haoyu AI Interview Agent",
+  "status": "Working prototype, continuously improving",
+  "project_goal": "Build a personal AI agent that allows recruiters to learn about Haoyu Qian's verified background, skills, projects, motivations and internship availability through natural conversation.",
+  "technologies": [
+    "Python",
+    "OpenAI Agents SDK",
+    "FastAPI",
+    "SQLite",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Marked",
+    "DOMPurify"
+  ],
+  "architecture": [
+    "The browser chat page sends questions to the FastAPI backend through the POST /chat endpoint.",
+    "FastAPI assigns each visitor an independent session and invokes the Haoyu AI agent.",
+    "The agent selects different tools according to the user's question.",
+    "Profile tools read verified facts from profile.json.",
+    "Persona tools read confirmed motivations and personal expressions from persona.json.",
+    "SQLiteSession stores multi-turn conversation history.",
+    "The final answer is returned as JSON and rendered on the web page."
+  ],
+  "completed_features": [
+    "Structured personal profile knowledge base",
+    "Structured personal persona and motivation knowledge base",
+    "Agent tool calling",
+    "Separate tools for profile, project and persona queries",
+    "Keyword-based project search",
+    "Grounded answers based on verified information",
+    "Chinese and English response rules",
+    "Multi-turn conversation memory through SQLiteSession",
+    "FastAPI health-check and chat endpoints",
+    "Browser-based chat interface",
+    "Independent session IDs for different visitors",
+    "Markdown rendering with HTML sanitization",
+    "New conversation function",
+    "API key protection through environment variables"
+  ],
+  "privacy_and_safety": [
+    "The OpenAI API key is stored in a local .env file and excluded from Git.",
+    "The agent is instructed not to invent personal experiences or technical abilities.",
+    "Sensitive personal information is not included in the public knowledge base.",
+    "Agent-generated Markdown is sanitized before being inserted into the page."
+  ],
+  "not_completed": [
+    "RAG document retrieval",
+    "Vector database integration",
+    "Automated evaluation dataset",
+    "Rate limiting",
+    "Cloud production deployment",
+    "Automated tests"
+  ],
+  "learning_outcomes": [
+    "Learned how to call a large language model API from Python.",
+    "Learned how an agent selects and invokes tools.",
+    "Learned how to separate objective facts from subjective personal expressions.",
+    "Learned how to build a FastAPI backend and connect it to a browser frontend.",
+    "Learned how to maintain multi-turn conversation state with SQLite.",
+    "Learned basic API key protection and output sanitization practices."
+  ]
+},
+    {
+      "name": "Go Library Management Backend",
+      "status": "Working prototype, continuously improving",
+      "technologies": [
+        "Go",
+        "Gin",
+        "GORM",
+        "MySQL",
+        "RESTful API"
+      ],
+      "completed_features": [
+        "Book list query",
+        "Single book query",
+        "Book creation",
+        "Book borrowing",
+        "Book returning",
+        "Unavailable book query",
+        "Controller-service-DAO-model-router layered structure",
+        "MySQL persistence through GORM",
+        "Persistent answer feedback with thumbs up and thumbs down"
+      ],
+      "not_completed": [
+        "Redis caching",
+        "User authentication",
+        "Online production deployment"
+      ]
+    },
+
+    {
+      "name": "Office Group Meal Ordering Mini Program",
+      "status": "Completed basic functions",
+      "technologies": [
+        "WeChat Mini Program",
+        "JavaScript",
+        "Cloud Database",
+        "Cloud Functions"
+      ],
+      "completed_features": [
+        "Home page",
+        "Meal ordering page",
+        "Order page",
+        "User center",
+        "Product management",
+        "Order management"
+      ]
+    },
+
+    {
+      "name": "C Library Management System",
+      "status": "Completed",
+      "technologies": [
+        "C",
+        "SQL",
+        "MySQL"
+      ],
+      "completed_features": [
+        "Book creation",
+        "Book deletion",
+        "Book search",
+        "Book update",
+        "Borrowing and returning workflows"
+      ]
+    },
+
+    {
+      "name": "Cloud Deployment and Docker Practice",
+      "status": "Completed basic deployment practice",
+      "technologies": [
+        "Linux",
+        "Docker",
+        "Cloud Server"
+      ],
+      "completed_features": [
+        "Server environment configuration",
+        "Docker image pulling",
+        "Container startup",
+        "Port mapping",
+        "Service access verification"
+      ]
+    }
+  ],
+
+  "awards": [
+    {
+      "name": "National College Student Mathematical Modeling Contest",
+      "result": "Provincial Second Prize",
+      "date": "2025-10"
+    },
+    {
+      "name": "National College Student Mathematics Competition",
+      "result": "Provincial Third Prize",
+      "date": "2025-01"
+    },
+    {
+      "name": "University Scholarship",
+      "result": "Second-Class Scholarship",
+      "date": "2024"
+    }
+  ],
+
+  "availability": {
+    "available_immediately": true,
+    "days_per_week": 5,
+    "can_continue_after_semester_starts": true,
+    "preferred_city": "Shenzhen"
+  }
+}
