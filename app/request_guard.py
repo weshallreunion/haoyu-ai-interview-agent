@@ -335,15 +335,3 @@ request_limiter = RequestLimiter(
 session_concurrency_guard = (
     SessionConcurrencyGuard()
 )
-
-
-request_limiter = RequestLimiter(
-    per_ip_per_minute=PER_IP_PER_MINUTE,
-    per_session_per_hour=(
-        PER_SESSION_PER_HOUR
-    ),
-)
-
-session_concurrency_guard = (
-    SessionConcurrencyGuard()
-)

@@ -201,12 +201,22 @@ def create_session(
 def get_client_ip(
     request: Request,
 ) -> str:
-    """读取当前访问者的IP地址。"""
+    """读取访问者IP，优先使用Railway传递的真实IP。"""
 
-    if request.client is None:
-        return "unknown"
+    railway_real_ip = request.headers.get(
+        "x-real-ip"
+    )
 
-    return request.client.host or "unknown"
+    if railway_real_ip:
+        return railway_real_ip.strip()
+
+    if request.client is not None:
+        return (
+            request.client.host
+            or "unknown"
+        )
+
+    return "unknown"
 
 
 async def acquire_session_or_raise(
